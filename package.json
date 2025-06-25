@@ -1,0 +1,32 @@
+{
+  "version": "0.0.1",
+  "name": "@deanacus/knowledge-graph-mcp",
+  "description": "MCP server for enabling project memory through a Kuzu-powered knowledge graph",
+  "author": "Dean Harris <dean@harris.tc>",
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "knowledge-graph-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist/*"
+  ],
+  "scripts": {
+    "build": "rm -rf ./dist && tsc && shx chmod +x dist/*.js",
+    "prepare": "npm run build",
+    "watch": "tsc --watch"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.13.1",
+    "kuzu": "^0.10.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "shx": "^0.4.0",
+    "typescript": "^5.8.3"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  }
+}
